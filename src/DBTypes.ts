@@ -31,6 +31,8 @@ type TravelPost = {
   user_id: number;
   media_url: string; // stores the image path
   media_type: string;
+  thumbnail: string | null;
+  screenshots: string[] | null;
   continent: string;
   country: string;
   city: string;
