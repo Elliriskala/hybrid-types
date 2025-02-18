@@ -29,7 +29,8 @@ type PostTag = {
 type TravelPost = {
   post_id: number;
   user_id: number;
-  post_image: string; // stores the image path
+  media_url: string; // stores the image path
+  media_type: string;
   continent: string;
   country: string;
   city: string;
