@@ -70,7 +70,8 @@ type MostLikedPosts = Pick<
   TravelPost,
   | "post_id"
   | "user_id"
-  | "post_image"
+  | "media_url"
+  | "media_type"
   | "continent"
   | "country"
   | "city"
