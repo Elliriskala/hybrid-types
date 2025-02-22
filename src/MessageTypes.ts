@@ -34,7 +34,8 @@ type BooleanResponse = MessageResponse & {
 // for upload server
 type UploadResponse = MessageResponse & {
   data: {
-    filename: string;
+    media_url: string;
+    media_type: string;
   };
 };
 
