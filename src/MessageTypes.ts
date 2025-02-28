@@ -33,10 +33,10 @@ type BooleanResponse = MessageResponse & {
 
 // for upload server
 type UploadResponse = MessageResponse & {
-  data: {
-    media_url: string;
-    media_type: string;
-  };
+    data: {
+        filename: string;
+        media_type: string;
+    };
 };
 
 export type {
