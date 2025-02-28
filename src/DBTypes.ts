@@ -39,6 +39,7 @@ type TravelPost = {
     end_date: Date | string;
     description: string;
     created_at: Date | string;
+    tags: string[] | null;
 };
 
 type Follow = {
