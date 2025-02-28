@@ -28,15 +28,13 @@ type PostTag = {
 type TravelPost = {
     post_id: number;
     user_id: number;
-    media_url: string;
+    filename: string;
     media_type: string;
     thumbnail: string | null;
     screenshots: string[] | null;
     continent: string;
     country: string;
     city: string;
-    latitude: number | null;
-    longitude: number | null;
     start_date: Date | string;
     end_date: Date | string;
     description: string;
@@ -71,7 +69,7 @@ type UploadResult = {
     };
 };
 
-type MostLikedPosts = Pick<TravelPost, "post_id" | "user_id" | "media_url" | "media_type" | "continent" | "country" | "city" | "latitude" | "longitude" | "start_date" | "end_date" | "description" | "created_at"> & Pick<User, "user_id" | "username" | "email" | "profile_picture" | "profile_info" | "created_at"> & {
+type MostLikedPosts = Pick<TravelPost, "post_id" | "user_id" | "filename" | "media_type" | "continent" | "country" | "city" | "start_date" | "end_date" | "description" | "created_at"> & Pick<User, "user_id" | "username" | "email" | "profile_picture" | "profile_info" | "created_at"> & {
     likes_count: bigint;
 };
 
@@ -80,7 +78,7 @@ type UserWithLevel = Omit<User, "user_level_id"> & Pick<UserLevel, "level_name">
 type TokenContent = Pick<User, "user_id" | "username" | "email"> & Pick<UserLevel, "level_name">;
 
 type FileInfo = {
-    media_url: string;
+    filename: string;
     user_id: number;
 };
 
